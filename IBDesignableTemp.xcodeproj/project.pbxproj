@@ -13,6 +13,7 @@
 		428EA59E1AD02D0000531132 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428EA59D1AD02D0000531132 /* Images.xcassets */; };
 		428EA5A11AD02D0000531132 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428EA59F1AD02D0000531132 /* LaunchScreen.xib */; };
 		428EA5AD1AD02D0000531132 /* IBDesignableTempTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EA5AC1AD02D0000531132 /* IBDesignableTempTests.swift */; };
+		428EA5B71AD02D9F00531132 /* IBDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EA5B61AD02D9F00531132 /* IBDesignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		428EA5A61AD02D0000531132 /* IBDesignableTempTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBDesignableTempTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		428EA5AB1AD02D0000531132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428EA5AC1AD02D0000531132 /* IBDesignableTempTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableTempTests.swift; sourceTree = "<group>"; };
+		428EA5B61AD02D9F00531132 /* IBDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				428EA5961AD02D0000531132 /* AppDelegate.swift */,
 				428EA5981AD02D0000531132 /* ViewController.swift */,
+				428EA5B61AD02D9F00531132 /* IBDesignView.swift */,
 				428EA59A1AD02D0000531132 /* Main.storyboard */,
 				428EA59D1AD02D0000531132 /* Images.xcassets */,
 				428EA59F1AD02D0000531132 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428EA5B71AD02D9F00531132 /* IBDesignView.swift in Sources */,
 				428EA5991AD02D0000531132 /* ViewController.swift in Sources */,
 				428EA5971AD02D0000531132 /* AppDelegate.swift in Sources */,
 			);
