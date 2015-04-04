@@ -37,6 +37,8 @@ import UIKit
     }
     
     
+    var tempView : UIView!
+    
     // Helper to return the main layer as CAGradientLayer
     var gradientLayer: CAGradientLayer {
         return layer as CAGradientLayer
@@ -57,9 +59,11 @@ import UIKit
         setupView()
     }
 
-
+    
     // Setup the view appearance
     private func setupView(){
+        
+        self.tempView = UIView(frame: CGRect(x: 10.0 , y: 10.0, width: 20.0, height: 20.0))
         
         let colors:Array = [startColor.CGColor, endColor.CGColor]
         gradientLayer.colors = colors
@@ -74,5 +78,52 @@ import UIKit
         self.setNeedsDisplay()
         
     }
-
+    
 }
+
+
+
+@IBDesignable class Circle: UIView {
+    
+    
+    override func drawRect(rect: CGRect) {
+        
+//        var circle = UIBezierPath(arcCenter: self.center, radius: (self.frame.size.width/2)-5, startAngle: 10, endAngle: 130, clockwise: true)
+//        UIColor.grayColor().setStroke()
+//        circle.lineWidth=10
+//        circle.stroke()
+     
+        let path : CGMutablePathRef = CGPathCreateMutable()
+        
+        CGPathMoveToPoint(path, nil, self.frame.origin.x, self.frame.origin.y)
+        
+        CGPathAddLineToPoint(path, nil, self.frame.origin.x+50, self.frame.origin.y+10)
+        CGPathAddLineToPoint(path, nil, self.frame.origin.x+50, self.frame.origin.y+50)
+        CGPathCloseSubpath(path)
+        
+        
+        var line = UIBezierPath(CGPath: path)
+        line.lineWidth = 5
+        UIColor.grayColor().setStroke()
+        line.stroke()
+    
+        println(path)
+    }
+    
+}
+
+
+
+// we can also extend the it by using the 
+extension UIView {
+    @IBInspectable var cornerRadious : CGFloat{
+        get{
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+            self.layer.masksToBounds = newValue > 0
+        }
+    }
+}
+
